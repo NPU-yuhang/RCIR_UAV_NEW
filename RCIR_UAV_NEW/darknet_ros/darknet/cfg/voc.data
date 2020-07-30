@@ -1,0 +1,4 @@
+classes= 2
+train  = /media/nvidia/SD2/catkin_m100/src/darknet_ros/darknet/scripts/2007_train.txt
+names = data/voc.names
+backup = /media/nvidia/SD2/catkin_m100/src/darknet_ros/darknet/results/

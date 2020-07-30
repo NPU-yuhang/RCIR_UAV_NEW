@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!--LOCAL COSTMAP-->
+  <node pkg="dji_sdk_demo" type="local_costmap_node" name="local_costmap_node" output="screen">
+    <param name="local_costmap_res" value="0.2"/>
+    <param name="local_costmap_height" value="40"/>
+    <param name="local_costmap_width" value="40"/>
+  </node>
+
+  <!--LOCAL PLANNER-->
+  <node pkg="dji_sdk_demo" type="local_planner_node" name="local_planner_node" output="screen">
+    <param name="max_branch_length" value="0.8"/>
+    <param name="search_radius" value="2"/>
+  </node>
+
+  <!--RVIZ-->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dji_sdk_demo)/rviz/local_planner.rviz" required="true"/>
+
+  <!--TF pub-->
+  <node pkg="tf" type="static_transform_publisher" name="map" args="0 0 0 0 0 1 world map 10" />
+
+</launch>

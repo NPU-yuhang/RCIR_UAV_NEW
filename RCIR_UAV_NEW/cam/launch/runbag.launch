@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <node name = "mono_lidar_fusion" pkg = "cam" type = "mono_lidar_fusion" args="$(find cam)/config/mono_lidar.yaml" output="screen"/>
+</launch>
+

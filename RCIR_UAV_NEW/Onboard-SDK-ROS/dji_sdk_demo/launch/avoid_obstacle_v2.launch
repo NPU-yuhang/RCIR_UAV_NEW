@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <node name = "avoid_obstacle_v2" pkg = "dji_sdk_demo" type = "avoid_obstacle_v2" args="$(find dji_sdk_demo)/config/config.yaml" output="screen"/>
+</launch>

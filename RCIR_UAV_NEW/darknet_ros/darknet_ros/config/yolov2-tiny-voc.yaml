@@ -1,0 +1,11 @@
+yolo_model:
+
+  config_file:
+    name: yolov2-tiny-voc.cfg
+  weight_file:
+    name: yolov2-tiny-voc_obsta.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+      - obstacle
